@@ -1,0 +1,11 @@
+Package: rparquet
+Title: Read and Write 'Parquet' Files
+Version: 0.0.0.9000
+Authors@R: 
+    person("Dewey", "Dunnington", , "dewey@dunnington.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-9415-4582"))
+Description: Reads and writes 'Parquet' files.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1

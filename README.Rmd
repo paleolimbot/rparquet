@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# rparquet
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of rparquet is to provide a nanoarrow-based Parquet file reader with minimal install footprint. It's currently an experiment and barely works at all (see Example).
+
+## Installation
+
+You can install the development version of rparquet from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("paleolimbot/rparquet")
+```
+
+Installation requires a rust compiler.
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(rparquet)
+
+schema <- nanoarrow::nanoarrow_allocate_schema()
+
+rparquet:::parquet_read_schema(
+  "inst/extdata/penguins.parquet",
+  nanoarrow::nanoarrow_pointer_addr_chr(schema)
+)
+
+schema
+```

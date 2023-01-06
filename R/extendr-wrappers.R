@@ -12,5 +12,5 @@ NULL
 #' @export
 hello_world <- function() .Call(wrap__hello_world)
 
-parquet_read_schema <- function(path, stream_ptr) .Call(wrap__parquet_read_schema, path, stream_ptr)
+parquet_read_schema <- function(path, schema_ptr) .Call(wrap__parquet_read_schema, path, schema_ptr)
 

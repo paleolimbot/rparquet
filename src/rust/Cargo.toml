@@ -8,4 +8,4 @@ crate-type = [ 'staticlib' ]
 
 [dependencies]
 extendr-api = '*'
-parquet = "30.0.0"
+arrow2 = { version = "0.15.0", features = ["io_parquet"] }
